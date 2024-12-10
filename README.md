@@ -294,5 +294,6 @@ Waar ik moeite mee had tijdens het maken van de website was hem responsive maken
   3. https://www.youtube.com/watch?v=gWgzzVVcqfA (form)
   4. ChatGPT (table)
   5. ChatGPT (Dark mode, niet gelukt)
+  6. Lijn met pijltje (ChatGPT)
 
 </details>

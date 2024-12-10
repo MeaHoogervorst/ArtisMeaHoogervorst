@@ -6,7 +6,6 @@
 *::before {
     box-sizing: border-box;
 }
-/* ChatGPT */
 
 :root {
     --primary-color: #011E07;
@@ -20,6 +19,8 @@
     --line-color: #C5E3BE;
     --footer-text-color: #000000;
 }
+/* ChatGPT */
+
 @media (prefers-color-scheme: dark) {
     :root {
         --primary-color: #1a1a1a; 
@@ -212,6 +213,7 @@ h3 {
     flex-grow: 1;
     
 }
+/* ChatGPT */
 
 .sectioneen ul li a::before {
     content: "";
@@ -286,6 +288,7 @@ h3 {
     padding-bottom: 5px;
     flex-grow: 1;
 }
+/* ChatGPT */
 
 .sectiontwee ul li a::before {
     content: "";
@@ -338,7 +341,7 @@ section {
     transition: box-shadow 0.3s ease;
 }
 
-/* Carousel */
+/* W3schools & ChatGPT */
 .carousel {
     display: flex;
     overflow: hidden;
@@ -544,7 +547,7 @@ footer a {
 footer a:hover {
     color: var(--footer-link-hover-color);
 }
-
+/* https://www.youtube.com/watch?v=gWgzzVVcqfA */
 
 form {
     margin-top: 40px;
@@ -646,6 +649,7 @@ footer ul {
 footer img {
     width: 300px;
 }
+/* ChatGPT */
 
 .artispark ul li a {
     color: #C5E3BE;
@@ -662,7 +666,6 @@ footer img {
     content: "→";
     position: absolute;
     right: 0;
-    /* Plaats aan het uiteinde van de lijn */
     top: 50%;
     transform: translateY(-50%);
     opacity: 1;
@@ -671,7 +674,6 @@ footer img {
 
 .artispark ul li a:hover::after {
     transform: translateY(-50%) translateX(5px);
-    /* Pijl beweegt naar rechts */
 }
 
 .carousel2 {
@@ -686,6 +688,7 @@ footer img {
     padding: 20px;
     box-sizing: border-box;
 }
+/* W3schools & ChatGPT */
 
 .carousel-button {
     position: absolute;
@@ -741,6 +744,7 @@ footer img {
 .ticketprijzen {
     background-color: #ffffff;
 }
+/* MDN */
 
 summary {
     cursor: pointer;
@@ -765,6 +769,7 @@ summary::after {
 details {
     margin-bottom: 10px;
 }
+/* ChatGPT */
 
 table {
     width: 100%;
