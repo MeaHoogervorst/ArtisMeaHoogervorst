@@ -180,6 +180,12 @@ Wat lastig ging was het bijhouden van de README. Ik had hier helemaal niet aan g
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
+![TT1](readme-images/TT1.heic) 
+![TT2](readme-images/TT2.heic)
+![TT3](readme-images/TT3.heic)
+![TT4](readme-images/TT4.HEIC)
+![TT5](readme-images/TT5.heic)
+
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
   - Grote teksten zijn erg moeilijk te lezen.
@@ -290,10 +296,10 @@ Waar ik moeite mee had tijdens het maken van de website was hem responsive maken
   Nb. Vermeld de bronnen ook in je code.
 
   1. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details (Dropdown menu)
-  2. https://www.w3schools.com/howto/howto_js_slideshow.asp & ChatGPT (Carousel)
+  2. https://www.w3schools.com/howto/howto_js_slideshow.asp & ChatGPT 'Hoe kan ik deze code samenvoegen of inkorten'(Carousel)
   3. https://www.youtube.com/watch?v=gWgzzVVcqfA (form)
-  4. ChatGPT (table)
-  5. ChatGPT (Dark mode, niet gelukt)
-  6. Lijn met pijltje (ChatGPT)
+  4. ChatGPT 'Hoe maak je een table met html en css' (table)
+  5. ChatGPT '(ingevoegd code) Waarom gebeurt er niks al ik dark mode aanzet'(Dark mode, niet gelukt)
+  6. ChatGPT 'Hoe zet ik het pijltje aan het eind van de regel' 'Hoe zorg je ervoor dat het lijntje tot het eind doorloopt' (Lijn met pijltje)
 
 </details>

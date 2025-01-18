@@ -13,26 +13,22 @@
     --accent-color: #F0F0EC;
     --text-color: #333;
     --heading-color: #000000;
-    --hover-color: #C5E3BE;
-    --button-bg-color: #000000;
-    --button-text-color: #C5E3BE;
-    --line-color: #C5E3BE;
-    --footer-text-color: #000000;
+    --background-color: #ffffff ;
+    --border-radius-small: 0.5em;
+    --border-radius-medium: 1em;
+    --border-radius-large: 2em;
+    --border-radius-xlarge: 3em;
+    --border-radius-xxlarge: 4em;
 }
+
 /* ChatGPT */
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary-color: #1a1a1a; 
-        --secondary-color: #b3b3b3; 
-        --accent-color: #333333; 
-        --text-color: #000000; 
-        --heading-color: #ffffff; 
-        --hover-color: #45853f; 
-        --button-bg-color: #000000; 
-        --button-text-color: #333333; 
-        --line-color: #666666; 
-        --footer-text-color: #000000; 
+        --accent-color: #0c4300;
+        --heading-color: #ffffff;
+        --text-color: #ffffff;
+        --background-color: #003304;
     }
 }
 
@@ -52,21 +48,19 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    background-color: #ffffff; 
+    background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
     padding: 0;
 
 }
 
-
-
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    background-color: #ffffff;
+    padding: 1.25em 10%;
+    background-color: var(--background-color);
 }
 
 .container img {
@@ -74,7 +68,7 @@ body {
 }
 
 header {
-    background-color: #ffffff; 
+    background-color: var(--background-color);
     color: var(--heading-color);
 }
 
@@ -84,16 +78,20 @@ header h1 {
     color: var(--heading-color);
 }
 
+h1 a {
+    color: var(--heading-color);
+}
+
 header a p {
     font-size: 1.2rem;
     font-weight: 600;
     color: rgb(0, 0, 0);
     margin: 0;
-    background-color: #000;
+    background-color:var(--heading-color);
 }
 
 header img {
-    height: 50px;
+    height: 3.1em;
     max-width: 100%;
 }
 
@@ -111,53 +109,54 @@ nav ul li {
     justify-content: center;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 15px 20px;
+    padding: 0.9em 1.25em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 nav ul li:hover {
     background-color: var(--hover-color);
-    border-radius: 1em;
+    border-radius: var(--border-radius-medium);
+
 }
 
 nav ul li:nth-of-type(1) {
-    border-top-left-radius: 4em;
-    border-bottom-left-radius: 4em;
-    border-bottom-right-radius: 1em;
-    border-top-right-radius: 1em;
-    padding-left: 30px;
-    padding-right: 30px;
+    border-top-left-radius: var(--border-radius-xxlarge);
+    border-bottom-left-radius: var(--border-radius-xxlarge);
+    border-bottom-right-radius: var(--border-radius-medium);
+    border-top-right-radius: var(--border-radius-medium);
+    padding-left: 1.8em;
+    padding-right: 1.8em;
     transform: skew(-10deg);
     overflow: hidden;
 }
 
 nav ul li:nth-of-type(2) {
     overflow: hidden;
-    border-radius: 0.5em;
+    border-radius: var(--border-radius-small);
 }
 
 nav ul li:nth-of-type(3) {
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 4em;
-    border-top-right-radius: 4em;
+    border-top-left-radius: var(--border-radius-medium);
+    border-bottom-left-radius: var(--border-radius-medium);
+    border-bottom-right-radius: var(--border-radius-xxlarge);
+    border-top-right-radius: var(--border-radius-xxlarge);
     transform: skew(10deg);
     overflow: hidden;
 }
 
 
 div a p {
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 2em;
-    padding-left: 30px;
-    padding-right: 30px;
+    color: var(--background-color);
+    padding: 0.6em;
+    border-radius: var(--border-radius-large);
+    padding-left: 1.8em;
+    padding-right: 1.8em;
 
 }
 
 main {
-    padding: 40px 10%;
+    padding: 2.5em 10%;
 }
 
 h2 {
@@ -173,46 +172,53 @@ h3 {
 .sectioneen {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 40px;
-    border-radius: 2em;
+    padding: 2.5em;
+    border-radius: var(--border-radius-large);
 }
 
 .sectioneen h2 {
     color: var(--secondary-color);
     font-size: xxx-large;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 
 .sectioneen ul {
     list-style: none;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Eventueel aanpassen voor meerdere kolommen */
+    gap: 0.9em;
 }
 
 .sectioneen ul li {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* Eerste kolom voor afbeelding, tweede voor tekst */
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 0;
+    /* Marges worden nu bepaald door 'gap' in de grid */
     position: relative;
 }
 
 .sectioneen ul li img {
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
+    width: 1.8em;
+    height: 1.8em;
+    margin-right: 0.9em;
+    /* Houd dit voor wat extra ruimte tussen afbeelding en tekst */
 }
 
 .sectioneen ul li a {
-    color: #C5E3BE;
+    color: var(--secondary-color);
     position: relative;
     display: inline-block;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
-    padding-bottom: 5px;
-    flex-grow: 1;
-    
+    padding-bottom: 0.3em;
 }
+
 /* ChatGPT */
 
 .sectioneen ul li a::before {
@@ -221,16 +227,14 @@ h3 {
     bottom: 0;
     left: 0;
     width: 100%;
-    /* Volledige breedte van de link */
-    height: 0.1px;
-    background-color: #C5E3BE;
+    height: 0.006em;
+    background-color: var(--secondary-color);
 }
 
 .sectioneen ul li a::after {
     content: "→";
     position: absolute;
     right: 0;
-    /* Plaats aan het uiteinde van de lijn */
     top: 50%;
     transform: translateY(-50%);
     opacity: 1;
@@ -238,24 +242,23 @@ h3 {
 }
 
 .sectioneen ul li a:hover::after {
-    transform: translateY(-50%) translateX(5px);
-    /* Pijl beweegt naar rechts */
+    transform: translateY(-50%) translateX(0.3em);
 }
 
 .sectioneen a {
-    color: #C5E3BE;
+    color: var(--secondary-color);
 }
 
 .sectioneen a p {
-    color: #C5E3BE;
+    color: var(--secondary-color);
 }
 
 
 .sectiontwee {
-    background-color: #011E07;
-    color: #C5E3BE;
-    padding: 40px;
-    border-radius: 2em;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2.5em;
+    border-radius: var(--border-radius-large);
 }
 
 
@@ -268,26 +271,27 @@ h3 {
 .sectiontwee ul li {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 0.9em;
     position: relative;
 }
 
 .sectiontwee ul li img {
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
+    width: 1.8em;
+    height: 1.8em;
+    margin-right: 0.9em;
 }
 
 .sectiontwee ul li a {
-    color: #C5E3BE;
+    color: var(--secondary-color);
     position: relative;
     display: inline-block;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
-    padding-bottom: 5px;
+    padding-bottom: 0.3em;
     flex-grow: 1;
 }
+
 /* ChatGPT */
 
 .sectiontwee ul li a::before {
@@ -296,8 +300,8 @@ h3 {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 0.1px;
-    background-color: #C5E3BE;
+    height: 0.006em;
+    background-color: var(--secondary-color);
 }
 
 .sectiontwee ul li a::after {
@@ -311,21 +315,21 @@ h3 {
 }
 
 .sectiontwee ul li a:hover::after {
-    transform: translateY(-50%) translateX(5px);
+    transform: translateY(-50%) translateX(0.3em);
 }
 
 .sectiontwee h2 {
-    color: #C5E3BE;
+    color: var(--secondary-color);
     font-size: xxx-large;
     font-weight: 400;
 }
 
 .sectiontwee a {
-    color: #C5E3BE;
+    color: var(--secondary-color);
 }
 
 .sectiontwee a p {
-    color: #C5E3BE;
+    color: var(--secondary-color);
 }
 
 .sectiontwee img {
@@ -333,10 +337,10 @@ h3 {
 }
 
 section {
-    background-color: #C5E3BE;
-    padding: 40px;
-    border-radius: 2em;
-    box-shadow: 0 4px 10px #F0F0EC;
+    background-color: var(--secondary-color);
+    padding: 2.5em;
+    border-radius: var(--border-radius-large);
+    box-shadow: 0 0.25em 0.6em #F0F0EC;
     margin-bottom: 1em;
     transition: box-shadow 0.3s ease;
 }
@@ -346,9 +350,9 @@ section {
     display: flex;
     overflow: hidden;
     position: relative;
-    background-color: #F0F0EC;
+    background-color: var(--accent-color);
     padding: 3em;
-    border-radius: 2em;
+    border-radius: var(--border-radius-large);
 }
 
 .artispark {
@@ -361,27 +365,27 @@ section {
     position: absolute;
     top: 50%;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: var(--background-color);
     border: none;
-    padding: 10px;
+    padding: 0.6em;
     cursor: pointer;
 }
 
 .prev {
-    left: 10px;
+    left: 0.6em;
 }
 
 .next {
-    right: 10px;
+    right: 0.6em;
 }
 
 
 .carousel .artispark:nth-child(1) {
-    background-color: #C5E3BE;
+    background-color: var(--secondary-color);
 }
 
 .carousel .artispark:nth-child(1) li a {
-    color: #000000;
+    color: var(--heading-color);
 }
 
 .carousel .artispark:nth-child(1) h2 {
@@ -393,7 +397,7 @@ section {
 }
 
 .carousel .artispark:nth-child(2) li a {
-    color: #000000;
+    color: var(--heading-color);
 }
 
 .carousel .artispark:nth-child(2) h2 {
@@ -405,54 +409,54 @@ section {
 }
 
 .carousel .artispark:nth-child(3) h2 {
-    color: #ffffff;
+    color: var(--background-color);
     font-weight: 400;
 }
 
 .carousel .artispark:nth-child(3) p {
-    color: #ffffff;
+    color: var(--background-color);
 }
 
 .carousel .artispark:nth-child(3) li a {
-    color: #ffffff;
+    color: var(--background-color);
 }
 
 article {
-    background-color: #F0F0EC;
-    padding: 40px;
-    border-radius: 2em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--accent-color);
+    padding: 2.5em;
+    border-radius: var(--border-radius-large);
+    box-shadow: 0 0.25em 0.6em rgba(0, 0, 0, 0.1);
     margin-bottom: 1em;
 
 }
 
 section:hover,
 article:hover {
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.3em 0.9em rgba(0, 0, 0, 0.15);
 }
 
 section h2,
 article h2 {
     font-size: 2.5rem;
-    color: #000000;
+    color: var(--heading-color);
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 0.9em;
 }
 
 section h3,
 article h3 {
     font-size: 1.5rem;
-    color: #000000;
+    color: var(--heading-color);
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 0.9em;
 }
 
 section p,
 article p {
     font-size: 1rem;
-    color: #000000;
+    color: var(--heading-color);
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 
 section ul,
@@ -464,11 +468,11 @@ article ul {
 section ul li,
 article ul li {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.6em;
 }
 
 section ul li img {
-    width: 30px;
+    width: 1.8em;
     margin-right: 1em;
 }
 
@@ -490,22 +494,22 @@ button {
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     border: none;
-    padding: 15px 30px;
+    padding: 0.9em 1.8em;
     font-size: 1rem;
-    border-radius: 2em;
+    border-radius: var(--border-radius-large);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-bottom: 1em;
 }
 
 article button {
-    color: #F0F0EC;
+    color: var(--accent-color);
 }
 
 
 
 button:hover {
-    background-color: #000000;
+    background-color: var(--heading-color);
     transform: scale(1.05);
 }
 
@@ -516,8 +520,8 @@ button:focus {
 
 video {
     width: 100%;
-    max-width: 500px;
-    border-radius: 1em;
+    max-width: 31em;
+    border-radius: var(--border-radius-medium);
     margin-bottom: 1em;
 }
 
@@ -525,8 +529,8 @@ video {
 
 img {
     width: 100%;
-    border-radius: 3em;
-    margin-bottom: 20px;
+    border-radius: var(--border-radius-xlarge);
+    margin-bottom: 1.25em;
 }
 
 
@@ -539,7 +543,7 @@ footer {
 }
 
 footer a {
-    color: white;
+    color: var(--background-color);
     text-decoration: none;
     font-weight: 600;
 }
@@ -547,54 +551,55 @@ footer a {
 footer a:hover {
     color: var(--footer-link-hover-color);
 }
+
 /* https://www.youtube.com/watch?v=gWgzzVVcqfA */
 
 form {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #F0F0EC;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 2.5em;
+    padding: 1.25em;
+    background-color: var(--accent-color);
+    border-radius: 0.75em;
+    box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.1);
     margin-bottom: 3em;
 }
 
 form h2 {
     font-size: 2.5rem;
     color: #003b1c;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
     margin-bottom: 1em;
 }
 
 form input[type="email"] {
     width: 100%;
-    padding: 15px;
+    padding: 0.9em;
     font-size: 1rem;
-    margin-bottom: 20px;
-    border: 1px solid #F0F0EC;
-    border-radius: 10px;
+    margin-bottom: 1.25em;
+    border: 1px solid var(--accent-color);
+    border-radius: 0.6em;
 }
 
 form button[type="submit"] {
-    background-color: #011E07;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--background-color);
     border: none;
-    padding: 15px 30px;
+    padding: 0.9em 1.8em;
     font-size: 1rem;
-    border-radius: 50px;
+    border-radius: 3.1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 form button[type="submit"]:hover {
-    background-color: #011E07;
+    background-color: var(--primary-color);
     transform: scale(1.05);
 }
 
 section ul li a {
     display: inline-block;
-    padding: 5px 0;
+    padding: 0.3em 0;
     font-size: 1.2rem;
-    color: #011E07;
+    color: var(--primary-color);
 }
 
 h3 {
@@ -611,15 +616,15 @@ p {
 }
 
 .collage {
-    background-color: #C5E3BE;
+    background-color:var(--secondary-color);
 }
 
 .collage button {
-    color: #C5E3BE;
+    color: var(--secondary-color);
 }
 
 p a {
-    color: #000000;
+    color: var(--heading-color);
 }
 
 .gechiedenis {
@@ -630,12 +635,12 @@ p a {
 .geschiedenis h2,
 .geschiedenis p,
 .geschiedenis p a {
-    background-color: #011E07;
-    color: #C5E3BE;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 footer {
-    color: #000000;
+    color: var(--heading-color);
 }
 
 footer ul {
@@ -647,17 +652,18 @@ footer ul {
 }
 
 footer img {
-    width: 300px;
+    width: 18.75em;
 }
+
 /* ChatGPT */
 
 .artispark ul li a {
-    color: #C5E3BE;
+    color: var(--secondary-color);
     position: relative;
     display: inline-block;
     text-decoration: none;
     font-size: 1.2rem;
-    padding-bottom: 5px;
+    padding-bottom: 0.3em;
     display: flex;
 }
 
@@ -673,7 +679,7 @@ footer img {
 }
 
 .artispark ul li a:hover::after {
-    transform: translateY(-50%) translateX(5px);
+    transform: translateY(-50%) translateX(0.3em);
 }
 
 .carousel2 {
@@ -685,54 +691,55 @@ footer img {
 .natuurbehoud {
     flex: 0 0 100%;
     transition: transform 0.5s ease-in-out;
-    padding: 20px;
+    padding: 1.25em;
     box-sizing: border-box;
 }
+
 /* W3schools & ChatGPT */
 
 .carousel-button {
     position: absolute;
     top: 50%;
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: var(--background-color);
     border: none;
-    padding: 10px;
+    padding: 0.6em;
     cursor: pointer;
     font-size: 2rem;
     z-index: 10;
 }
 
 .prev {
-    left: 10px;
+    left: 0.6em;
 }
 
 .next {
-    right: 10px;
+    right: 0.6em;
 }
 
 .natuurbehoud {
-    background-color: #F0F0EC;
-    border-radius: 2em;
+    background-color: var(--accent-color);
+    border-radius: var(--border-radius-large);
 }
 
 .natuurbehoud img {
     max-width: 100%;
     height: 50%;
-    border-radius: 3em;
+    border-radius: var(--border-radius-xlarge);
 }
 
 .natuur {
-    background-color: #C5E3BE;
+    background-color: var(--secondary-color);
 }
 
 .dropdown,
 .dropdown p {
-    background-color: #011E07;
-    color: #C5E3BE;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .dropdown h2 {
-    color: #C5E3BE;
+    color: var(--secondary-color);
     font-weight: 700;
     font-size: xxx-large;
 }
@@ -744,6 +751,7 @@ footer img {
 .ticketprijzen {
     background-color: #ffffff;
 }
+
 /* MDN */
 
 summary {
@@ -753,12 +761,12 @@ summary {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    border-bottom: 0.1px solid #C5E3BE;
-    padding: 10px;
+    border-bottom: 0.006em solid var(--secondary-color);
+    padding: 0.6em;
 }
 
 summary:hover {
-    border-bottom: 1px solid #000;
+    border-bottom: 0.006em solid var(--heading-color);
 }
 
 summary::after {
@@ -767,22 +775,23 @@ summary::after {
 }
 
 details {
-    margin-bottom: 10px;
+    margin-bottom: 0.6em;
 }
+
 /* ChatGPT */
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 16px;
+    margin: 1.25em 0;
+    font-size: 1em;
     text-align: left;
 }
 
 th,
 td {
     border-bottom: 1px solid #ccc;
-    padding: 30px;
+    padding: 1.8em;
 }
 
 th {
@@ -796,7 +805,7 @@ tbody tr:hover {
 }
 
 .ticketprijzen button {
-    color: #ffffff;
+    color: var(--background-color);
     width: 100%;
 }
 
@@ -807,22 +816,22 @@ h2 {
 }
 
 .artisapp {
-    background-color: #011E07;
+    background-color: var(--primary-color);
 
 }
 
 .artisapp h2,
 .artisapp p {
-    color: #C5E3BE;
+    color: var(--secondary-color);
     font-weight: 100;
 }
 
 .route {
-    background-color: #C5E3BE;
+    background-color: var(--secondary-color);
 }
 
 .eten {
-    background-color: #F0F0EC;
+    background-color: var(--accent-color);
 }
 
 
@@ -855,26 +864,33 @@ h2 {
         width: 100%;
     }
 
-    .cijfers h2 {
-        font-size: xxx-large;
-    }
-
-    .cijfers p {
-        font-size: large;
-    }
 }
 
 @media (min-width: 768px) {
 
 
-    .responsive1,.responsive5 {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul {
+        gap: 1em;
+    }
+
+    .container {
+        gap: 1em;
+    }
+
+    .responsive1 {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
     }
 
     .sectioneen,
-    .responsive1 div, .sectiontwee, .responsive5 div {
+    .responsive1>div {
         flex: 1 1 48%;
         min-width: 300px;
     }
@@ -907,12 +923,7 @@ h2 {
 
     .collage,
     .geschiedenis,
-    .leervannatuur,
-    .natuur,
-    .artisapp,
-    .route, 
-    .plattegrond,
-    .eten {
+    .leervannatuur {
         display: flex;
 
     }
@@ -922,53 +933,23 @@ h2 {
     }
 
     .geschiedenis img,
-    .leervannatuur img,
-    .natuur img, 
-    .artisapp img,
-    .route img,
-    .plattegrond img,
-    .eten img
-     {
-        width: 98%;
+    .leervannatuur img {
+        width: 95%;
     }
 
     .collage div,
     .geschiedenis div,
-    .leervannatuur div,
-    .natuur div.artisapp div,
-    .route div,
-    .plattegrond div,
-    .eten div
-    {
+    .leervannatuur div {
         display: flex;
         flex-direction: column;
         gap: 10px;
         align-items: flex-start;
     }
 
-    .cijfers,
-    .cijfers h2 {
-        display: flex;
-        justify-content: space-between;
-    }
-
     h2 {
         font-size: xxx-large;
     }
 
-    .responsive4 {
-        display: flex;
-        justify-content: space-between;
-        gap: 3em;
-    }
-    footer{
-        display: flex;
-        justify-content: space-between;
-    }
-    footer li{
-        padding: 1em;
-    }
-    div h2{
-        max-width: 50%;
-    }
+
+
 }
