@@ -180,11 +180,11 @@ Wat lastig ging was het bijhouden van de README. Ik had hier helemaal niet aan g
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
-![TT1](readme-images/TT1.heic) 
-![TT2](readme-images/TT2.heic)
-![TT3](readme-images/TT3.heic)
-![TT4](readme-images/TT4.HEIC)
-![TT5](readme-images/TT5.heic)
+![TT1](readme-images/TT1.png) 
+![TT2](readme-images/TT2.png)
+![TT3](readme-images/TT3.png)
+![TT4](readme-images/TT4.png)
+![TT5](readme-images/TT5.png)
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
